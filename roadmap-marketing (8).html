@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#FFD84D" />
+<title>KEVIN · План стажування маркетолога запусків</title>
+<meta name="description" content="Роудмап онбордингу маркетолога запусків KEVIN. 3 дні від велком-мітингу до Action Plan." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23FFD84D'/%3E%3Ctext x='50' y='72' font-family='serif' font-size='70' font-weight='900' text-anchor='middle' fill='%231A1A1A'%3EK%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --yellow: #FFD84D;
+    --yellow-dark: #F5C800;
+    --yellow-deep: #C49A00;
+    --yellow-soft: #FFF4C2;
+    --cream: #FAFAF0;
+    --cream-alt: #FFFDF0;
+    --black: #1A1A1A;
+    --dark: #2A2A2A;
+    --mid: #555;
+    --gray: #888;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+
+  /* ===== Hero ===== */
+  .hero {
+    padding: 60px 24px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--black);
+    position: relative;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--black);
+    color: var(--cream);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-weight: 900;
+    font-size: clamp(32px, 6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+  .hero-highlight {
+    position: relative;
+    display: inline-block;
+  }
+  .hero-highlight span { position: relative; z-index: 1; }
+  .hero-highlight::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: 8%;
+    height: 38%;
+    background: var(--yellow);
+    z-index: 0;
+  }
+  .hero-desc {
+    font-size: clamp(15px, 2vw, 18px);
+    max-width: 600px;
+    margin-top: 24px;
+    color: var(--dark);
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .hero-pill {
+    background: white;
+    border: 1.5px solid var(--black);
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* ===== Day separator ===== */
+  .day-block {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
+  }
+  .day-badge {
+    display: inline-block;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 15px;
+    box-shadow: 4px 4px 0 var(--yellow);
+    margin-bottom: 8px;
+  }
+  .day-badge-num {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .day-date {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 13px;
+    background: var(--yellow-soft);
+    padding: 5px 11px;
+    border-radius: 8px;
+    border: 1.5px solid var(--yellow-deep);
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* ===== Steps ===== */
+  .steps {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 24px;
+  }
+
+  .step {
+    background: white;
+    border: 2.5px solid var(--black);
+    border-radius: 16px;
+    padding: 22px 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 6px 6px 0 var(--yellow);
+    position: relative;
+  }
+
+  .step-num {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    font-weight: 900;
+    font-size: 18px;
+    border: 2.5px solid var(--black);
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  .step-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--yellow);
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .step-icon-wrap svg { width: 18px; height: 18px; stroke-width: 2.5; }
+
+  .step-title {
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp(17px, 2.2vw, 21px);
+    line-height: 1.25;
+    vertical-align: middle;
+    max-width: calc(100% - 110px);
+  }
+
+  .step-meta {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .step-desc {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-top: 14px;
+    color: var(--dark);
+  }
+
+  .step-highlight {
+    margin-top: 14px;
+    padding: 11px 14px;
+    background: var(--yellow-soft);
+    border-left: 4px solid var(--yellow-deep);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: italic;
+    color: #5C4500;
+  }
+
+  /* ===== Details sections ===== */
+  .details {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .details-section {
+    background: var(--cream-alt);
+    border: 2px solid var(--black);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 4px 4px 0 var(--yellow);
+  }
+  .details-section.accent {
+    background: var(--yellow-soft);
+    box-shadow: 4px 4px 0 var(--black);
+  }
+  .details-section.rule {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 0 #D8D8D0;
+  }
+  .details-h4 {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--black);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .details-h4 .e {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 16px;
+  }
+  .details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .details-list li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--dark);
+    margin-bottom: 7px;
+  }
+  .details-list li:last-child { margin-bottom: 0; }
+  .details-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--black);
+  }
+
+  /* ===== Button ===== */
+  .step-action {
+    margin-top: 18px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 var(--black);
+  }
+
+  /* ===== Courses ===== */
+  .courses {
+    background: var(--black);
+    color: var(--cream);
+    padding: 60px 24px;
+    margin-top: 50px;
+  }
+  .courses-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-weight: 800;
+    font-size: clamp(24px, 3.5vw, 36px);
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    margin-bottom: 28px;
+  }
+  .courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 700px) {
+    .courses-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .course-card {
+    border-radius: 18px;
+    padding: 24px;
+    text-decoration: none;
+    display: block;
+  }
+  .course-card.yellow {
+    background: var(--yellow);
+    color: var(--black);
+  }
+  .course-card.dark {
+    background: var(--dark);
+    color: var(--cream);
+    border: 2.5px solid var(--yellow);
+  }
+  .course-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--black);
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .course-card.dark .course-icon { background: var(--yellow); color: var(--black); }
+  .course-icon svg { width: 22px; height: 22px; stroke-width: 2.5; }
+  .course-title {
+    font-weight: 800;
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  .course-desc {
+    font-size: 13.5px;
+    margin-bottom: 14px;
+    opacity: 0.9;
+  }
+  .course-cta {
+    font-weight: 700;
+    font-size: 13.5px;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    border-top: 2px solid var(--black);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+  }
+
+  /* ===== Mobile ===== */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 18px 32px; }
+    .step { padding: 18px; box-shadow: 4px 4px 0 var(--yellow); }
+    .step-num { width: 38px; height: 38px; line-height: 38px; font-size: 16px; margin-right: 10px; }
+    .step-icon-wrap { width: 26px; height: 26px; margin-right: 8px; }
+    .step-icon-wrap svg { width: 15px; height: 15px; }
+    .step-title { font-size: 16px; max-width: calc(100% - 90px); }
+    .step-desc { font-size: 14px; }
+    .day-block { padding: 30px 18px 0; }
+    .day-badge { font-size: 13px; padding: 8px 14px; box-shadow: 3px 3px 0 var(--yellow); }
+    .day-badge-num { width: 20px; height: 20px; line-height: 20px; font-size: 10px; }
+    .day-date { font-size: 12px; padding: 4px 9px; }
+    .steps { padding: 16px 18px; }
+    .details-section { padding: 12px 14px; box-shadow: 3px 3px 0 var(--yellow); }
+    .details-section.accent { box-shadow: 3px 3px 0 var(--black); }
+    .details-section.rule { box-shadow: 3px 3px 0 #D8D8D0; }
+    .details-h4 { font-size: 13px; }
+    .details-list li { font-size: 12.5px; }
+    .courses { padding: 50px 18px; }
+    .btn-primary { display: block; text-align: center; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-tag">Програма стажування</div>
+  <h1 class="hero-title">
+    Привіт у команді<br/>
+    <span class="hero-highlight"><span>KEVIN</span></span>
+    👋
+  </h1>
+  <p class="hero-desc">
+    Це твій <strong>персональний роудмап стажування</strong> на позицію маркетолога запусків.
+    3 насичені дні — від велком-мітингу до узгодженого Action Plan.
+  </p>
+  <div class="hero-tags">
+    <div class="hero-pill">📅 3 дні стажування</div>
+    <div class="hero-pill">📚 2 курси на Kwiga</div>
+    <div class="hero-pill">💬 QA з CEO</div>
+  </div>
+</section>
+
+<!-- ===== ДЕНЬ 1 ===== -->
+<div class="day-block">
+  <div class="day-badge"><span class="day-badge-num">1</span>День 1</div>
+  <span class="day-date">📅 21.05 (ЧТ)</span>
+</div>
+
+<section class="steps">
+
+  <div class="step">
+    <span class="step-num">01</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+    </span>
+    <span class="step-title">Велком мітинг</span>
+    <p class="step-desc">Знайомство з командою KEVIN та орієнтація по навчанню. Тобі покажуть, як побудований онбординг, з якими матеріалами працюватимеш та з ким взаємодіятимеш щодня.</p>
+    <div class="step-highlight">💡 Це не просто знайомство — тут ти отримаєш карту твого навчання на найближчі 3 дні.</div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">02</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+    </span>
+    <span class="step-title">Заповнення анкети співробітника</span>
+    <div class="step-meta">⏱ ~10 хвилин</div>
+    <p class="step-desc">Коротка форма з персональними даними для HR-обліку.</p>
+    <div class="step-action">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzY86bA8ZYlU2tPurjt4hh0w59q_9_sVVMZTsubiYv8RzaKQ/viewform" target="_blank" rel="noopener" class="btn-primary">↗ Відкрити форму</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">03</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    </span>
+    <span class="step-title">Курс про компанію — повне опрацювання</span>
+    <div class="step-meta">⏱ до кінця дня</div>
+    <p class="step-desc">Цінності, історія, продукт, як влаштована команда. Це фундамент — без розуміння компанії важко стати її частиною. Курс має бути опрацьований повністю до кінця дня.</p>
+    <div class="step-highlight">⏰ Дедлайн: до кінця дня 21.05. Не залишай на потім — це база для всього подальшого навчання.</div>
+    <div class="step-action">
+      <a href="https://kevin-2024.kwiga.com/courses/kurs-pro-kompaniiu-kevin" target="_blank" rel="noopener" class="btn-primary">↗ Перейти до курсу</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">04</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    </span>
+    <span class="step-title">Проф.курс: День 1 (часткове опрацювання)</span>
+    <div class="step-meta">⏱ частково</div>
+    <p class="step-desc">Старт спеціалізованого курсу маркетолога запусків. У перший день — початкове ознайомлення з матеріалами Дня 1 (повне опрацювання — на наступний день).</p>
+    <div class="details">
+      <div class="details-section">
+        <div class="details-h4"><span class="e">📝</span>Що робиш у Дні 1 курсу</div>
+        <ul class="details-list">
+          <li>Починаєш ознайомлення з матеріалами Дня 1</li>
+          <li>Фіксуєш питання, які виникають по ходу — для QA з CEO</li>
+          <li>Не намагаєшся опрацювати все одразу — глибоке занурення продовжиться 22.05</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step-action">
+      <a href="https://kevin-2024.kwiga.com/courses/onbording-marketing-manager" target="_blank" rel="noopener" class="btn-primary">↗ Перейти до курсу</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== ДЕНЬ 2 ===== -->
+<div class="day-block">
+  <div class="day-badge"><span class="day-badge-num">2</span>День 2</div>
+  <span class="day-date">📅 22.05 (ПТ)</span>
+</div>
+
+<section class="steps">
+
+  <div class="step">
+    <span class="step-num">05</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    </span>
+    <span class="step-title">Завершення Дня 1 проф.курсу</span>
+    <div class="step-meta">⏱ ранок</div>
+    <p class="step-desc">Продовжуєш роботу над матеріалами Дня 1 професійного курсу — поглиблене опрацювання, фіксація питань для QA з CEO.</p>
+    <div class="step-highlight">📋 Готуй чіткий список питань до 12:30 — це твій основний інструмент для QA-сесії.</div>
+    <div class="step-action">
+      <a href="https://kevin-2024.kwiga.com/courses/onbording-marketing-manager" target="_blank" rel="noopener" class="btn-primary">↗ Перейти до курсу</a>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">06</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+    </span>
+    <span class="step-title">QA-сесія з CEO по Дню 1</span>
+    <div class="step-meta">⏱ 12:30</div>
+    <p class="step-desc">Жива сесія Q&amp;A з CEO о 12:30. Розбираєш усі питання, що накопичились під час опрацювання матеріалів Дня 1 професійного курсу.</p>
+    <div class="step-highlight">🔑 Це твій час — не соромся ставити будь-які питання. Чим точніше зрозумієш контекст, тим швидше вийдеш на результат.</div>
+    <div class="details">
+      <div class="details-section">
+        <div class="details-h4"><span class="e">🕐</span>Формат сесії</div>
+        <ul class="details-list">
+          <li>Час: 12:30, 22.05 (ПТ)</li>
+          <li>Тема: всі питання, що виникли при опрацюванні Дня 1 проф.курсу</li>
+          <li>Підготуй структурований список питань заздалегідь</li>
+        </ul>
+      </div>
+      <div class="details-section accent">
+        <div class="details-h4"><span class="e">💡</span>Як підготуватись</div>
+        <ul class="details-list">
+          <li>Випиши всі моменти, де щось не зрозуміло або потребує уточнення</li>
+          <li>Згрупуй питання за темами — так сесія пройде структуровано</li>
+          <li>Окремо познач питання, які блокують подальше навчання</li>
+          <li><strong>Сформований список питань відправ HR заздалегідь</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">07</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+    </span>
+    <span class="step-title">Початок Дня 2 проф.курсу</span>
+    <div class="step-meta">⏱ до 25.05</div>
+    <p class="step-desc">Після QA-сесії стартуєш з матеріалами Дня 2 професійного курсу. До понеділка (25.05) маєш завершити ознайомлення з усіма матеріалами курсу.</p>
+    <div class="details">
+      <div class="details-section rule">
+        <div class="details-h4"><span class="e">⏰</span>Дедлайн</div>
+        <ul class="details-list">
+          <li>До понеділка 25.05 — завершити ознайомлення з усіма матеріалами Дня 2</li>
+          <li>Робота над матеріалами на вихідних — за бажанням, не вимагається</li>
+          <li>У понеділок будеш готовий до фінальної QA-сесії та узгодження Action Plan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="step-action">
+      <a href="https://kevin-2024.kwiga.com/courses/onbording-marketing-manager" target="_blank" rel="noopener" class="btn-primary">↗ Перейти до курсу</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== ДЕНЬ 3 ===== -->
+<div class="day-block">
+  <div class="day-badge"><span class="day-badge-num">3</span>День 3</div>
+  <span class="day-date">📅 25.05 (ПН)</span>
+</div>
+
+<section class="steps">
+
+  <div class="step">
+    <span class="step-num">08</span>
+    <span class="step-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+    </span>
+    <span class="step-title">QA з CEO по Дню 2 + узгодження Action Plan</span>
+    <div class="step-meta">⏱ слот узгоджується</div>
+    <p class="step-desc">Одна зустріч з CEO — слот узгоджується окремо. Спочатку розбираєш усі питання по Дню 2 проф.курсу, далі на цій же зустрічі узгоджуєте Action Plan на перший робочий місяць.</p>
+    <div class="step-highlight">📅 Слот узгоджується через HR. Питання сформуй заздалегідь і відправ ейчару.</div>
+    <div class="details">
+      <div class="details-section">
+        <div class="details-h4"><span class="e">🕐</span>Формат зустрічі</div>
+        <ul class="details-list">
+          <li>Дата: 25.05 (ПН), слот узгоджується окремо</li>
+          <li>Тривалість: за необхідністю, без жорсткого таймінгу</li>
+          <li>Дві частини: QA по Дню 2 → узгодження Action Plan</li>
+        </ul>
+      </div>
+      <div class="details-section accent">
+        <div class="details-h4"><span class="e">💬</span>Частина 1 — QA по Дню 2</div>
+        <ul class="details-list">
+          <li>Структурований список питань по Дню 2 проф.курсу</li>
+          <li>Власні думки/гіпотези — навіть якщо не впевнений(а)</li>
+          <li><strong>Питання відправ HR заздалегідь</strong></li>
+        </ul>
+      </div>
+      <div class="details-section">
+        <div class="details-h4"><span class="e">🎯</span>Частина 2 — узгодження Action Plan</div>
+        <ul class="details-list">
+          <li><strong>Ключова мета AP</strong> — що досліджуємо, який запит бізнесу стоїть зараз</li>
+          <li><strong>Цінний кінцевий продукт ВП1</strong> — конкретний артефакт/результат, який потрібно зробити за період. Виконання ВП1 і є виконаним КПІ в межах Action Plan.</li>
+          <li><strong>Проміжні дедлайни</strong> — чекпоінти на шляху до ВП1, за якими контролюється прогрес</li>
+        </ul>
+      </div>
+      <div class="details-section rule">
+        <div class="details-h4"><span class="e">🚀</span>Що далі</div>
+        <ul class="details-list">
+          <li>Старт повноцінної роботи за узгодженим AP</li>
+          <li>Регулярна звітність по проміжних дедлайнах</li>
+          <li>Оцінка результату за фактом виконання ВП1 після завершення першого робочого місяця</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Courses -->
+<section class="courses">
+  <div class="courses-inner">
+    <div class="section-eyebrow">Бібліотека курсів</div>
+    <h2 class="section-title">Усі матеріали — в одному місці</h2>
+    <div class="courses-grid">
+      <a href="https://kevin-2024.kwiga.com/courses/kurs-pro-kompaniiu-kevin" target="_blank" rel="noopener" class="course-card yellow">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <h3 class="course-title">Про компанію KEVIN</h3>
+        <p class="course-desc">Базовий курс для всіх нових співробітників. Місія, цінності, продукт, команда.</p>
+        <div class="course-cta">↗ Відкрити курс</div>
+      </a>
+      <a href="https://kevin-2024.kwiga.com/courses/onbording-marketing-manager" target="_blank" rel="noopener" class="course-card dark">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+        </div>
+        <h3 class="course-title">Проф.курс: маркетолог запусків</h3>
+        <p class="course-desc">Спеціалізований курс твоєї ролі. Логіка запусків, інструменти, регламенти, метрики.</p>
+        <div class="course-cta">↗ Відкрити курс</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  KEVIN · План стажування маркетолога запусків · 2026
+</footer>
+
+</body>
+</html>
